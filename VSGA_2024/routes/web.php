@@ -3,5 +3,37 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+    return 'Selamat Datang';
 });
+
+Route::get('/hello', function () {
+    return 'Hello VSGA';
+});
+
+Route::get('/world', function () {
+    return 'Hello Dunia';
+});
+
+Route::get('/about', function () {
+    return 'NIM : 2231750005';
+});
+
+Route::get('/kodebarang/{jenis?}/{merek?}', function ($jk='K01',$mrk='nokia') {
+    return "kode barang $jk dan nama barang $mrk";
+});
+
+Route::get('/posts/{post}/{comment}', function ($post, $comment) {
+    return 'Pos ke-' . $post . " Komentar ke-: " . $comment;
+});
+
+Route::get('/user/{name}', function ($name=null) {
+    return 'Nama saya ' . $name;
+});
+
+Route::get('about', function () {
+    return view('about');
+})->name('about');
+
+Route::get('tampil', function () {
+    return view('tampil');
+})->name('tampil');
