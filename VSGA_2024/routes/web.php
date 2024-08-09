@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CRUDController;
 use App\Http\Controllers\CRUDPhoto;
+use App\Http\Controllers\halloController;
 use App\Http\Controllers\PageControllerSatu;
 use App\Http\Controllers\pengajarController;
 use App\Http\Controllers\WelcomeController;
@@ -92,3 +93,5 @@ Route::get('/selamat', function () {
 });
 
 Route::get('/greeting', [WelcomeController::class, 'greeting']);
+
+Route::get('/heloow', [HalloController::class, 'greeting']);
