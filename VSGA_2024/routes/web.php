@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\pengajarController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -60,3 +61,7 @@ Route::prefix('/polinema')->group(function(){
 Route::fallback(function(){
     return "maaf,alamat ini tidak ditemukan";
 });
+
+Route::get('/daftar-dosen',[pengajarController::class,'daftarPengajar']);
+Route::get('/tabel-pengajar',[pengajarController::class,'tabelPengajar']);
+Route::get('/blog-pengajar',[pengajarController::class,'blogPengajar']);
