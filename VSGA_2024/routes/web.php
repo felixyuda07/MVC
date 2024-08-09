@@ -56,3 +56,7 @@ Route::prefix('/polinema')->group(function(){
         return '<h1> daftar nama jurusan </h1>';
     });
 });
+
+Route::fallback(function(){
+    return "maaf,alamat ini tidak ditemukan";
+});
